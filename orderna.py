@@ -32,8 +32,8 @@ def gen_random_t_thousand():
 		zr.append(a)
 	print(zr)
 
-def bubbleSort():
-	
+# def bubbleSort():
+# 	for i in range(1,100)
 
 print("1: Print 100 ordered list itens.")
 print("2: Print 1000 ordered list itens.")
