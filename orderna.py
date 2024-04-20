@@ -8,66 +8,51 @@ x = range(1,100,1)  # ordered list with one hundred elements
 y = range(1,1000,1) # ordered list with one thousand elements
 z = range(1,10000,1) # ordered list with ten thousand elements
 
-# gen a random list with one hundred elements
-def gen_random_hundred():
-	xr = []
-	for i in range(1,100):
-		a = random.randint(1,100)
-		xr.append(a)
-	print(xr)
+# gen an random list with one hundred elements
+xr = []
+for i in range(100):
+	a = random.randint(0,100)
+	xr.append(a)
+# print(xr)
 
-# gen a random list with one thousand elements
-def gen_random_o_thousand():
-	yr = []
-	for i in range(1,1000):
-		a = random.randint(1,1000)
-		yr.append(a)
-	print(yr)
+# gen an random list with one thousand elements
+yr = []
+for i in range(1000):
+	a = random.randint(1,1000)
+	yr.append(a)
+# print(yr)
 
-# gen a random list with ten thousand elements
-def gen_random_t_thousand():
-	zr = []
-	for i in range(1,10000):
-		a = random.randint(1,10000)
-		zr.append(a)
-	print(zr)
+# gen an random list with ten thousand elements
+zr = []
+for i in range(10000):
+	a = random.randint(0,9999)
+	zr.append(a)
+# print(zr)
 
-# def bubbleSort():
-# 	for i in range(1,100)
+def bubbleSort(list):
+	any = 0
+	for i in range(len(list)):
+		for j in range(len(list)):
+			if(list[i] < list[j]):
+				any = list[i]
+				list[i] = list[j]
+				list[j] = any
+	print(list)
 
-print("1: Print 100 ordered list itens.")
-print("2: Print 1000 ordered list itens.")
-print("3: Print 10000 ordered list itens.")
-print("4: Print 100 random list itens.")
-print("5: Print 1000 random list itens.")
-print("6: Print 10000 random list itens.")
-print("0: Quit")
-choose = input("Choose: ")
 
-while (choose != 0):
-	if choose == '1':	
-			print(list(x))
-	elif choose == '2':	
-			print(list(y))
-	elif choose == '3':	
-			print(list(z))
-	elif choose == '4':	
-		gen_random_hundred()
-	elif choose == '5':	
-		gen_random_o_thousand()
-	elif choose == '6':	
-		gen_random_t_thousand()
-	elif choose == '0':
-			print("you_chose_quit")
-			break
 
-	print("1: Print 100 ordered list itens.")
-	print("2: Print 1000 ordered list itens.")
-	print("3: Print 10000 ordered list itens.")
-	print("4: Print 100 random list itens.")
-	print("5: Print 1000 random list itens.")
-	print("6: Print 10000 random list itens.")
-	print("0: Quit")
-	choose = input("Choose: ")
-else:
-	print("you_chose_quit")
+def insertionSort(list):
+	
+	for i in range(100,1):
+		print(list)
+
+
+
+
+					
+					
+					
+
+
+# bubbleSort(zr)
+insertionSort(x)
