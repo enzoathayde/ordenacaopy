@@ -43,15 +43,6 @@ def bubbleSort(list):
 				list[j] = any
 	print(list)
 
-
-
-# def insertionSort(list):
-# 	for i in range(len(list)):
-# 		key = list[i]
-# 		for j in range(len(list)):
-# 			if(list[j] < key):
-
-
 def selectionSort(list):
 	any = 0
 	for i in range(len(list)):
@@ -65,16 +56,20 @@ def selectionSort(list):
 	print(list)
 
 def insertionSort(list):
-	any = 0
-	
-
-
+	for i in range(1,len(list)):
+		any = list[i]  # fixa a posição do indice 1, segundo da lista
+		j = i - 1  # indice 0, primeiro da lista    
+		while(j >= 0 and any < list[j]):
+			list[j + 1] = list[j]
+			j = j - 1
+		list[j + 1] = any
+	print(list)				
 					
 					
-					
 
 
-bubbleSort(zr)
+# bubbleSort(zr)
 # insertionSort(x)
 # print(xr)
 #selectionSort(zr)
+insertionSort(xr)
