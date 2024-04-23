@@ -1,8 +1,10 @@
 import random
+from datetime import datetime
 
 
 choose = 31289321893
 a = 0
+
 
 xa = range(1,1000,1)  # ordered list with one thousand elements ascending
 ya = range(1,10000,1) # ordered list with ten thousand elements ascending
@@ -34,6 +36,7 @@ for i in range(100000):
 # print(zr)
 
 def bubbleSort(list):
+	startBubbleSortSecond = datetime.now()
 	any = 0
 	for i in range(len(list)):
 		for j in range(i + 1,len(list)):
@@ -41,9 +44,13 @@ def bubbleSort(list):
 				any = list[i]
 				list[i] = list[j]
 				list[j] = any
+	endBubbleSortSecond = datetime.now()
+	diffTimeBubbleSort = endBubbleSortSecond - startBubbleSortSecond
+	print(diffTimeBubbleSort)
 	print(list)
 
 def selectionSort(list):
+	startSelectionSortSecond = datetime.now()
 	any = 0
 	for i in range(len(list)):
 		min = i 
@@ -53,9 +60,13 @@ def selectionSort(list):
 		any = list[i]
 		list[i] = list[min]
 		list[min] = any
+	endSelectionSortSecond = datetime.now()
+	diffTimeSelectionSort = endSelectionSortSecond - startSelectionSortSecond
+	print(diffTimeSelectionSort)
 	print(list)
 
 def insertionSort(list):
+	startInsertionSortSecond = datetime.now()
 	for i in range(1,len(list)):
 		any = list[i]  # fixa a posição do indice 1, segundo da lista
 		j = i - 1  # indice 0, primeiro da lista    
@@ -63,13 +74,21 @@ def insertionSort(list):
 			list[j + 1] = list[j]
 			j = j - 1
 		list[j + 1] = any
+	endInsertionSortSecond = datetime.now()
+	diffTimeInsertionSort = endInsertionSortSecond - startInsertionSortSecond
+	print(diffTimeInsertionSort)
 	print(list)				
-					
-					
 
 
-# bubbleSort(zr)
+
+# def quickSort(list):
+# 	pivot = len(list) / 2
+	 
+					
+	
+
+bubbleSort(zr)
 # insertionSort(x)
 # print(xr)
-#selectionSort(zr)
-insertionSort(xr)
+# selectionSort(zr)
+# insertionSort(xr)
