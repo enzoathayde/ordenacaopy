@@ -47,7 +47,7 @@ def bubbleSort(list):
 	endBubbleSortSecond = datetime.now()
 	diffTimeBubbleSort = endBubbleSortSecond - startBubbleSortSecond
 	print(diffTimeBubbleSort)
-	print(list)
+
 
 def selectionSort(list):
 	startSelectionSortSecond = datetime.now()
@@ -63,7 +63,6 @@ def selectionSort(list):
 	endSelectionSortSecond = datetime.now()
 	diffTimeSelectionSort = endSelectionSortSecond - startSelectionSortSecond
 	print(diffTimeSelectionSort)
-	print(list)
 
 def insertionSort(list):
 	startInsertionSortSecond = datetime.now()
@@ -77,17 +76,43 @@ def insertionSort(list):
 	endInsertionSortSecond = datetime.now()
 	diffTimeInsertionSort = endInsertionSortSecond - startInsertionSortSecond
 	print(diffTimeInsertionSort)
-	print(list)				
+		
+
+
+def quickSort(list,left,right):
+	startQuickSortSecond = datetime.now()
+	if (left < right):
+		partitionPosition = partition(list,left,right)
+		quickSort(list,left,partitionPosition - 1)
+		quickSort(list,partitionPosition + 1, right)
+
+
+def partition(list,left,right):
+	i = left
+	j = right - 1
+	pivot = list[right]
+	while (i < j):
+		while (i < right) and (list[i] < pivot):
+			i += 1
+		while (j > left) and (list[j] >= pivot):
+			j -= 1
+		if (i < j):
+			list[i], list[j] = list[j], list[i]
+
+		if list[i] > pivot:
+			list[i], list[right] = list[right], list[i]
+
+	return i
 
 
 
-# def quickSort(list):
-# 	pivot = len(list) / 2
-	 
-					
-	
 
-bubbleSort(zr)
+
+
+print(xr)
+quickSort(xr,0,999)
+print(xr)
+# bubbleSort(zr)
 # insertionSort(x)
 # print(xr)
 # selectionSort(zr)
