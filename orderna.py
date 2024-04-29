@@ -20,7 +20,6 @@ for i in range(1000):
 	a = random.randint(0,1000)
 	xr.append(a)
 # print(xr)
-
 # gen an random list with one thousand elements
 yr = []
 for i in range(10000):
@@ -38,12 +37,12 @@ for i in range(100000):
 def bubbleSort(list):
 	startBubbleSortSecond = datetime.now()
 	any = 0
-	for i in range(len(list)):
-		for j in range(i + 1,len(list)):
-			if(list[i] > list[j]):
-				any = list[i]
-				list[i] = list[j]
-				list[j] = any
+	for i in range(len(list) - 1):
+		for j in range(len(list)- i - 1):
+			if(list[j] > list[j + 1]):
+				any = list[j]
+				list[j] = list[j+1]
+				list[j+1] = any
 	endBubbleSortSecond = datetime.now()
 	diffTimeBubbleSort = endBubbleSortSecond - startBubbleSortSecond
 	print(diffTimeBubbleSort)
@@ -85,7 +84,9 @@ def quickSort(list,left,right):
 		partitionPosition = partition(list,left,right)
 		quickSort(list,left,partitionPosition - 1)
 		quickSort(list,partitionPosition + 1, right)
-
+	endQuickSortSecond = datetime.now()
+	diffQuickSortTime = endQuickSortSecond - startQuickSortSecond
+	print(diffQuickSortTime)
 
 def partition(list,left,right):
 	i = left
@@ -109,10 +110,8 @@ def partition(list,left,right):
 
 
 
-print(xr)
-quickSort(xr,0,999)
-print(xr)
-# bubbleSort(zr)
+# quickSort(zr,0,99999)
+bubbleSort(zr)
 # insertionSort(x)
 # print(xr)
 # selectionSort(zr)
