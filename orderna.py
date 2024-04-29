@@ -5,13 +5,14 @@ from datetime import datetime
 choose = 31289321893
 a = 0
 
-
+wa = range(1,1000000,1) # ordered list with one million elements ascending
 xa = range(1,1000,1)  # ordered list with one thousand elements ascending
 ya = range(1,10000,1) # ordered list with ten thousand elements ascending
 za = range(1,100000,1) # ordered list with one hundred thousand elements ascending
 xd = range(1000,1,1)  # ordered list with one hundred elements descending
 yd = range(10000,1,1) # ordered list with one thousand elements descending
 zd = range(100000,1,1) # ordered list with ten thousand elements descending
+wd = range(1000000,1,1) # ordered list with one million elements descending
 
 
 # gen an random list with one hundred elements
@@ -32,6 +33,13 @@ zr = []
 for i in range(100000):
 	a = random.randint(0,100000)
 	zr.append(a)
+# print(zr)
+
+
+wr = []
+for i in range(1000000):
+	a = random.randint(0,1000000)
+	wr.append(a)
 # print(zr)
 
 def bubbleSort(list):
