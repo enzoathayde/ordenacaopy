@@ -1,18 +1,64 @@
 import random
 from datetime import datetime
+a=0
+
+# ordered list with one thousand elements ascending
+wa = []
+for i in range(1000000):
+	a = i
+	wa.append(a)
+#print(wa)
 
 
-choose = 31289321893
-a = 0
+# ordered list with one thousand elements ascending
+xa = []
+for i in range(1000):
+	a = i
+	xa.append(a)
+#print(xa)
 
-wa = list(range(1,1000000,1)) # ordered list with one million elements ascending
-xa = list(range(1,1000,1))  # ordered list with one thousand elements ascending
-ya = list(range(1,10000,1)) # ordered list with ten thousand elements ascending
-za = list(range(1,100000,1)) # ordered list with one hundred thousand elements ascending
-xd = list(range(1000,1,1))  # ordered list with one hundred elements descending
-yd = list(range(10000,1,1)) # ordered list with one thousand elements descending
-zd = list(range(100000,1,1)) # ordered list with ten thousand elements descending
-wd = list(range(1000000,1,1)) # ordered list with one million elements descending
+# ordered list with ten thousand elements ascending
+ya = []
+for i in range(10000):
+	a = i
+	xa.append(a)
+# print(ya)
+
+# ordered list with one hundred thousand elements ascending
+za = []
+for i in range(100000):
+	a = i
+	xa.append(a)
+# print(za)
+
+# ordered list with one thousand elements descending
+wd = []
+for i in range(1000000,1,-1):
+	a = i
+	wd.append(a)
+print(wd)
+
+
+# ordered list with one thousand elements ascending
+xd = []
+for i in range(1000,1,-1):
+	a = i
+	xd.append(a)
+# print(xd)
+
+# ordered list with ten thousand elements ascending
+yd = []
+for i in range(10000,1,-1):
+	a = i
+	yd.append(a)
+# print(yd)
+
+# ordered list with one hundred thousand elements ascending
+zd = []
+for i in range(100000,1,-1):
+	a = i
+	zd.append(a)
+# print(zd)
 
 
 # gen an random list with one hundred elements
@@ -123,8 +169,8 @@ def partition(list,left,right):
 
 
 # quickSort(zr,0,99999)
-bubbleSort(xd)
-print(xd)
+# bubbleSort(xd)
+# print(xd)
 # insertionSort(x)
 # print(xr)
 # selectionSort(zr)
