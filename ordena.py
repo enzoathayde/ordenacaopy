@@ -2,64 +2,51 @@ import random
 from datetime import datetime
 a=0
 
-# ordered list with one thousand elements ascending
-wa = []
-for i in range(1000000):
-	a = i
-	wa.append(a)
-#print(wa)
 
+def generate_ordered_list(start, end):
+  """Generates a list of integers in ascending order from start (inclusive) to end (exclusive).
 
-# ordered list with one thousand elements ascending
-xa = []
-for i in range(1000):
-	a = i
-	xa.append(a)
-#print(xa)
+  Args:
+      start: The starting value of the list (inclusive).
+      end: The ending value of the list (exclusive).
 
-# ordered list with ten thousand elements ascending
-ya = []
-for i in range(10000):
-	a = i
-	xa.append(a)
-# print(ya)
+  Returns:
+      A list of integers in ascending order.
+  """
+  return list(range(start, end))
 
-# ordered list with one hundred thousand elements ascending
-za = []
-for i in range(100000):
-	a = i
-	xa.append(a)
-# print(za)
+# Ordered lists with different sizes
+wa = generate_ordered_list(1,10000001) # 1000000 elements
+xa = generate_ordered_list(1, 1001)  # 1000 elements
+ya = generate_ordered_list(1, 10001)  # 10000 elements
+za = generate_ordered_list(1, 100001)  # 100000 elements
 
-# ordered list with one thousand elements descending
-wd = []
-for i in range(1000000,1,-1):
-	a = i
-	wd.append(a)
-print(wd)
+def generate_descending_list(start, end):
 
+  return list(range(start, 0, -1))
 
-# ordered list with one thousand elements ascending
-xd = []
-for i in range(1000,1,-1):
-	a = i
-	xd.append(a)
-# print(xd)
+wd = generate_descending_list(1000000, 0) # 1000000 elements descending
+xd = generate_descending_list(1000, 0)  # 1000 elements descending
+yd = generate_descending_list(10000, 0)  # 10000 elements descending
+zd = generate_descending_list(100000, 0)  # 100000 elements descending
 
-# ordered list with ten thousand elements ascending
-yd = []
-for i in range(10000,1,-1):
-	a = i
-	yd.append(a)
-# print(yd)
+def generate_random_list(size, min_value=0, max_value=1000):
+  """Generates a list of random integers within a specified range.
 
-# ordered list with one hundred thousand elements ascending
-zd = []
-for i in range(100000,1,-1):
-	a = i
-	zd.append(a)
-# print(zd)
+  Args:
+      size: The size of the random list.
+      min_value: The minimum value (inclusive) for random numbers (default: 0).
+      max_value: The maximum value (exclusive) for random numbers (default: 1000).
 
+  Returns:
+      A list of random integers.
+  """
+  return [random.randint(min_value, max_value - 1) for _ in range(size)]
+
+xr = generate_random_list(1000)  # 1000 random elements
+yr = generate_random_list(10000)  # 10000 random elements
+zr = generate_random_list(100000)  # 100000 random elements
+wr = generate_random_list(1000000)  # 1000000 random elements
 
 # gen an random list with one hundred elements
 xr = []
@@ -165,11 +152,24 @@ def partition(list,left,right):
 
 
 
-
-
-
 # quickSort(zr,0,99999)
-# bubbleSort(xd)
+#print(xd)
+#bubbleSort(yr)
+# print(za)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+selectionSort(xa)
+# print(za)
+#print(xa)
+# print(xa)
 # print(xd)
 # insertionSort(x)
 # print(xr)
