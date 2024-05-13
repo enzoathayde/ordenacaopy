@@ -1,5 +1,7 @@
 import random
 from datetime import datetime
+import sys
+sys.setrecursionlimit(1000000000)
 a=0
 
 
@@ -152,26 +154,4 @@ def partition(list,left,right):
 
 
 
-# quickSort(zr,0,99999)
-#print(xd)
-#bubbleSort(yr)
-# print(za)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-selectionSort(xa)
-# print(za)
-#print(xa)
-# print(xa)
-# print(xd)
-# insertionSort(x)
-# print(xr)
-# selectionSort(zr)
-# insertionSort(xr)
+quickSort(wd,1,999998)
